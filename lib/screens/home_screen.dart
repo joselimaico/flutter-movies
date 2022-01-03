@@ -10,8 +10,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final moviesProvider = Provider.of<MoviesProvider>(context);
 
-    print(moviesProvider.onDisplayMovies);
-
     return Scaffold(
       appBar: AppBar(
         title: Text("Peliculas en cines"),
@@ -24,7 +22,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           children: [
             CardSwiper(movies: moviesProvider.onDisplayMovies),
-            MovieSlider()
+            MovieSlider(
+              popularMovies: moviesProvider.popularMovies, //populares
+              title: "Populares", //opcional
+            )
           ],
         ),
       ),
