@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 void main() => runApp(AppState());
 
 class AppState extends StatelessWidget {
+  const AppState({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
