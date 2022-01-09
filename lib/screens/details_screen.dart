@@ -80,7 +80,6 @@ class _PosterAndTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final size = MediaQuery.of(context).size;
-    print(movie.id);
 
     return Container(
         margin: EdgeInsets.only(top: 20),

@@ -13,8 +13,6 @@ class MoviesProvider extends ChangeNotifier {
   Map<int, List<Cast>> moviesCast = {};
 
   MoviesProvider() {
-    print('MoviesProvider inicializado');
-
     getOnDisplayMovies();
     getPopularMovies();
   }
@@ -54,7 +52,6 @@ class MoviesProvider extends ChangeNotifier {
     final creditResponse = CreditResponse.fromJson(jsonData);
 
     moviesCast[movieId] = creditResponse.cast;
-    print(creditResponse.cast.length);
     return creditResponse.cast;
   }
 }
